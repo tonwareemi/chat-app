@@ -1,34 +1,50 @@
 {
-  "chat":[ 
+  "chats":[
     {
-      "chatName":"Hillary",
-      "id":"6f7tug",
-      "chat":[["hi","them"],["hey","me"]]
+      "id":"text1",
+      "accessors":["c1","ad1"],
+      "messages":[
+        {
+        "sender":"c1",
+        "reciever":"ad1",
+        "text":"hi how are you"
+      }
+      ]
     },
-     {
-      "chatName":"Jerry",
-      "id":"6f8tug",
-      "chat":[["hi","them"],["hey","me"]]
-     },
-     {
-      "chatName":"Tom",
-      "id":"6f6tug",
-      "chat":[["hi","them"],["hey","me"]]
-     },
-     {
-      "chatName":"Thomas",
-      "id":"6g6tug" ,
-      "chat":[["hi","them"],["hey","me"]]
-     },
-     {
-      "chatName":"levi" ,
-      "id":"6y6tug" ,
-      "chat":[["hi","them"],["hey","me"]]
-     },
-     {
-      "chatName":"Hillary" ,
-      "id":"7t6tug" ,
-      "chat":[["hi","them"],["hey","me"]]
-     }
-    ]
+    {
+      "id":"text2",
+      "accessors":["c2","ad1"],
+      "messages":[
+        {
+        "sender":"c2",
+        "reciever":"ad1",
+        "text":"hi how are you"
+      }
+      ]
+    }
+    ],
+  "user":{
+    "admin":[
+      {
+      "id":"ad1",
+      "user":"admin",
+      "password":"adminPass",
+      "email":"admin@gmail.com"
+    }
+    ],
+    "customer":[
+      {
+        "id": "c1",
+        "user":"customer 1",
+        "password":"password",
+        "email":"customer1@email.com"
+      },
+      {
+        "id": "c2",
+        "user":"customer 2",
+        "password":"password",
+        "email":"customer2@email.com"
+      }
+      ]
+  }
 }

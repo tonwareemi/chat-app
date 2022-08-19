@@ -1,9 +1,9 @@
 import React from "react";
 import useFetch from  "../CustomHooks/usefetch"
-import { useParams,  useNavigate} from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 function List(){
-  let router = useNavigate();
+  //let router = useNavigate();
   const {id} = useParams()
   const { data , isPending, isError } =  useFetch("http://localhost:8000/chat");
   var Chat = ({list})=>{

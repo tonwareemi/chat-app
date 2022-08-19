@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes} from   "react-router-dom";
-import useFetch from "./CustomHooks/usefetch"
+import useFetchChatAccesor from "./CustomHooks/useFetchChatAccesor"
 import Home from "./component/home" 
 import List from "./component/list"
 import NonFound from "./component/notFound"
 
 function App() {
-  const {data,isPending,isError} = useFetch("http://localhost:8000/chat")
+  const {data,isPending,isError} = useFetchChatAccesor("http://localhost:8000/chats","c1")
   console.log(data)
   return (
     <div className="App">

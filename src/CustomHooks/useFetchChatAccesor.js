@@ -1,6 +1,6 @@
-import {useState, useEffect} from "react";
+import {useState,useEffect} from "react";
 
-function useFetch (url) {
+function useFetchChatAccesor (url,userid) {
   const [data,setData] = useState(null);
   const [isPending,setIsPending] = useState(true)
   const [isError, setIsError] = useState(false)
@@ -15,7 +15,19 @@ function useFetch (url) {
       return res.json();
     })
     .then( data => {
-      setData(data)
+      
+          setData(
+            data.filter((value)=>{
+            for(let i = 0; i  < value.accessors.length; i++){
+              if(value.accessors[i] === userid){
+                value.accessors.splice(i,1)
+                return value;
+              }
+            }
+          })
+            )
+
+      
       setIsPending(false)
     })
     .catch(error =>{
@@ -27,9 +39,10 @@ function useFetch (url) {
     }
     })
     return ()=> abort.abort()
-},[url])
+},[url,userid])
   
   return { data , isPending, isError }
 }
 
-export default useFetch;
+
+export default useFetchChatAccesor
