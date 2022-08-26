@@ -1,13 +1,16 @@
-import React from "react"
-//import { Link } from "react-router-dom"
+import React, {useContext,useEffect} from "react"
+import UserContext from "../context/userContext"
 
-var Home = ({data , isPending , isError}) =>{
+
+var Home = () =>{
+  const { data, isPending, isError, getUser } = useContext(UserContext);
   console.log(data)
+  useEffect(
+    getUser("http://localhost:8000/user","admin","ad1")
+  ,[])
 return(
   <div className="Home">
-   {isError && <h2> unable to retrive content try again later </h2>}
-   {isPending && <p>Loading........</p>}
-   { console.log(data)}
+   <h1> hi </h1>
   </div>
   )
 }
