@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes} from   "react-router-dom";
-import { UserProvider } from "./context/userContext"
+//import { UserProvider } from "./context/userContext"
 import Home from "./component/home" 
 import List from "./component/list"
 import NonFound from "./component/notFound"
@@ -10,14 +10,12 @@ function App() {
   //console.log(data)
   return (
     <div className="App">
-    <UserProvider>
       <Routes>
         <Route exact path="/" element={<Home />} />
            <Route exact path="chat/:id" element={<List />}/>
            <Route path="*"  element={<NonFound/>}/>
         <Route />
       </Routes>
-    </UserProvider>
     </div>
   );
 }
