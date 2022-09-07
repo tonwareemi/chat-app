@@ -1,0 +1,95 @@
+ 
+ /*------Button-------*/
+ 
+ 
+ 
+  /*-------FORM----------*/
+  
+form{
+  margin: 15vh auto;
+  width: 300px;
+}
+  
+.form{
+    position: relative;
+    height: 60px;
+    width: 300px;
+    overflow: hidden;
+    margin: 5px;
+  }
+  
+.form input{
+    width: 100%;
+    height: 100%;
+    padding-top:20px ;
+    color: black;
+    border:none;
+    outline: none;
+  }
+  
+.form label{
+    pointer-events: none;
+    position: absolute;
+    bottom: 5px;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px darkgray solid;
+  }
+  
+  .form label::after{
+    overflow: hidden;
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px #ECB390 solid;
+    transform: translatex(-100%);
+    transition: transform 0.4s ease;
+  }
+  
+  .form .text{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.4s ease;
+  }
+  
+  .form input:focus + .label-name .text,
+  .form input:valid + .label-name .text{
+    transform: translatey(-100%);
+    color: #ECB390;
+  }
+  
+  .form input:focus + .label-name::after,
+  .form input:valid + .label-name::after{
+    transform: translatex(0%);
+  }
+  
+  #message{
+    outline: none;
+    height: 100px;
+    width: 300px;
+  }
+  
+  #message:focus{
+    border: 2px #ECB390 solid;
+    color: black;
+  }
+  
+  .submit{
+    border: 2px solid #ECB390;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    display: block;
+    margin: 10px 0px 0px 240px;
+    text-align: center;
+  }
+  
+  .submit:hover{
+    background-color: #364F6B;
+    color: white;
+  }
