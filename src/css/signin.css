@@ -1,7 +1,30 @@
  
  /*------Button-------*/
  
+ nav{
+   width: 100%;
+   height: auto;
+   display: flex;
+   justify-items: left;
+   align-items: center;
+   padding-top: 10px;
+ }
  
+ .sign{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 60px;
+   width: 170px;
+ }
+ 
+ .sign div{
+   width: 80px;
+   border: 1px solid black;
+   box-sizing: border-box;
+   text-align: center;
+   display: inline-block;
+ }
  
   /*-------FORM----------*/
   
@@ -14,17 +37,15 @@ form{
     position: relative;
     height: 60px;
     width: 300px;
-    overflow: hidden;
-    margin: 5px;
+    /*overflow: hidden;*/
+    margin: 5px 0px 20px 0px;
   }
   
 .form input{
     width: 100%;
     height: 100%;
-    padding-top:20px ;
     color: black;
-    border:none;
-    outline: none;
+    border: 2px solid black;
   }
   
 .form label{
@@ -35,6 +56,7 @@ form{
     width: 100%;
     height: 100%;
     border-bottom: 1px darkgray solid;
+    border: 2px solid black;
   }
   
   .form label::after{
@@ -66,17 +88,6 @@ form{
   .form input:focus + .label-name::after,
   .form input:valid + .label-name::after{
     transform: translatex(0%);
-  }
-  
-  #message{
-    outline: none;
-    height: 100px;
-    width: 300px;
-  }
-  
-  #message:focus{
-    border: 2px #ECB390 solid;
-    color: black;
   }
   
   .submit{
