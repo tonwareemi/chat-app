@@ -1,29 +1,41 @@
  
  /*------Button-------*/
  
+.container{
+  background-color: #1F7A8C;
+  height: 68vh;
+  border-radius: 0 0px 40px 40px;
+}
+ 
  nav{
    width: 100%;
    height: auto;
    display: flex;
-   justify-items: left;
-   align-items: center;
+   align-items: right;
    padding-top: 10px;
+   
  }
  
  .sign{
+   height: 70px;
+   width: 170px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 60px;
-   width: 170px;
+   text-decoration: none;
  }
  
  .sign div{
    width: 80px;
-   border: 1px solid black;
+   height: 25px;
+   border: 1px solid white;
    box-sizing: border-box;
    text-align: center;
    display: inline-block;
+   border-radius: 5px;
+   background-color: #E1E5F2;
+   text-decoration: none;
+   color: black;
  }
  
   /*-------FORM----------*/
@@ -35,68 +47,38 @@ form{
   
 .form{
     position: relative;
-    height: 60px;
+    height: 40px;
     width: 300px;
     /*overflow: hidden;*/
-    margin: 5px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
+    background-color: #e1e5f2;
   }
   
 .form input{
     width: 100%;
     height: 100%;
     color: black;
-    border: 2px solid black;
-  }
-  
-.form label{
-    pointer-events: none;
-    position: absolute;
-    bottom: 5px;
-    left:0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px darkgray solid;
-    border: 2px solid black;
-  }
-  
-  .form label::after{
-    overflow: hidden;
-    content: " ";
-    position: absolute;
-    bottom: 0px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px #ECB390 solid;
-    transform: translatex(-100%);
-    transition: transform 0.4s ease;
-  }
-  
-  .form .text{
-    position: absolute;
-    bottom: 5px;
-    left: 0px;
-    transition: all 0.4s ease;
-  }
-  
-  .form input:focus + .label-name .text,
-  .form input:valid + .label-name .text{
-    transform: translatey(-100%);
-    color: #ECB390;
+    bottom: 0;
   }
   
   .form input:focus + .label-name::after,
   .form input:valid + .label-name::after{
-    transform: translatex(0%);
+    left: 0;
+    width:100%;
   }
   
   .submit{
-    border: 2px solid #ECB390;
+    border: 2px solid white;
     border-radius: 5px;
-    background-color: white;
+    background-color: #1F7A8C;
     color: black;
     display: block;
-    margin: 10px 0px 0px 240px;
+    margin: 5px 0px 0px 240px;
     text-align: center;
   }
   
