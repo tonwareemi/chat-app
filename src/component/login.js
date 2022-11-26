@@ -4,7 +4,7 @@ import "../css/signin.css"
 import {Link} from "react-router-dom"
 import Chats from "./chat"
 //import UserProvider from "../context/authContext"
-
+/*
 var Entry = ()=>{
   let auth = useContext(UserProvider);
   return(
@@ -13,7 +13,7 @@ var Entry = ()=>{
        { auth ? <Login /> : <Chats />}
       </div>
     )
-}
+}*/
 
 var Login = () =>{
 
@@ -42,4 +42,4 @@ return(
   )
 }
 
-export default Entry;
+export default Login;
