@@ -8,8 +8,8 @@
         "sender":"c1",
         "reciever":"ad1",
         "text":"hi how are you"
-      }
-      ]
+        }
+        ]
     },
     {
       "id":"text2",
@@ -26,7 +26,6 @@
   "user":{
     "admin":[
       {
-      "id":"ad1",
       "user":"admin",
       "password":"adminPass",
       "email":"admin@gmail.com"
@@ -34,14 +33,12 @@
     ],
     "customer":[
       {
-        "id": "c1",
-        "user":"customer 1",
+        "userName":"customer 1",
         "password":"password",
         "email":"customer1@email.com"
       },
       {
-        "id": "c2",
-        "user":"customer 2",
+        "userName":"customer 2",
         "password":"password",
         "email":"customer2@email.com"
       }
