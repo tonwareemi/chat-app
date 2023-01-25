@@ -23,15 +23,12 @@
       ]
     }
     ],
-  "user":{
-    "admin":[
+  "user":[
       {
       "user":"admin",
       "password":"adminPass",
       "email":"admin@gmail.com"
-    }
-    ],
-    "customer":[
+      },
       {
         "userName":"customer 1",
         "password":"password",
@@ -42,6 +39,5 @@
         "password":"password",
         "email":"customer2@email.com"
       }
-      ]
-  }
+  ]
 }

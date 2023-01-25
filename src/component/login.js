@@ -4,22 +4,32 @@ import {Link, useNavigate } from "react-router-dom"
 
 function Login(){
 //var states for collecting user login credential
-const [userEmail , setUserEmail] =  useState("");
+const [user , setUser] =  useState(""); // this can be email or user name
 const [password, setPassword] = useState("");
 //user credentials
-const [userInfo , setUserInfo] =  useState({})
+const [info , setInfo] =  useState([])
 const navigate = useNavigate();
 //onchange listener functions for collecting credentials
 const getUserNameInfo =(e)=>{
-  setUserEmail(e.target.value.toLowerCase())
+  setUser(e.target.value.toLowerCase())
 }
 const getPasswordInfo =(e)=>{
   setPassword(e.target.value)
 }
 //sign function to submit user credential
 const signIn =()=>{
-  if(password === userInfo.password){
-    navigate("/dashboard")
+  //authentication of email 
+  for(let i = 0; i < info.length; i++){
+    if(info[i].email === user|| info[i].user === user){
+      //console.log(info[i])
+        if(password === info[i].password){
+          navigate("/dashboard")
+        }else{
+          alert("username and password does not match")
+        }
+  }else{
+    
+  }
   }
 }
 
@@ -27,15 +37,19 @@ const signIn =()=>{
 
 useEffect(
     ()=>{
-     fetch(`http://localhost:8000/user`) 
-  .then(user => user.json()) 
-  .then(user => { 
-    for(var i = 0; i < user.customer.length; i++){
-      if(user.customer[i].email === userEmail){ 
-        setUserInfo(user.customer[i])
-      }
-    }
-  })},[userEmail]);
+      const abortCon = new AbortController()
+     fetch("http://localhost:8000/user",{signal: abortCon.signal}) 
+      .then(user =>{
+        if(!user.ok)
+        throw Error("failed fetch")
+        return user.json()
+      }) 
+      .then(userInfo => { 
+      setInfo(userInfo)
+      console.log(userInfo)
+    })
+      return ()=> abortCon.abort 
+    },[user]);
 
 return(
   <div className="Home">
@@ -59,7 +73,7 @@ return(
         </div>
         <div className="form">
         <input 
-        type="password" 
+        type="text" 
         name="password" 
         className="password" 
         placeholder="*********"
