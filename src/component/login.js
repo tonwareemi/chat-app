@@ -20,8 +20,8 @@ const getPasswordInfo =(e)=>{
 const signIn =()=>{
   //authentication of email 
   for(let i = 0; i < info.length; i++){
-    if(info[i].email === user|| info[i].user === user){
-      //console.log(info[i])
+    if(info[i].email === user|| info[i].userName === user){
+    
         if(password === info[i].password){
           navigate("/dashboard")
         }else{

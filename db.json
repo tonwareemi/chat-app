@@ -25,17 +25,17 @@
     ],
   "user":[
       {
-      "user":"admin",
+      "userName":"admin",
       "password":"adminPass",
       "email":"admin@gmail.com"
       },
       {
-        "userName":"customer 1",
+        "userName":"customer1",
         "password":"password",
         "email":"customer1@email.com"
       },
       {
-        "userName":"customer 2",
+        "userName":"customer2",
         "password":"password",
         "email":"customer2@email.com"
       }
