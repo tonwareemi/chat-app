@@ -1,18 +1,20 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import {Link, useNavigate} from "react-router-dom"
 import "../css/signin.css"
 //import UserContext from "../context/userContext"
 
 
 var Signup = () =>{
-  
- //var states for collecting user login credential
+
+ //var states for collecting user credential
+const [user , setUserInfo] = useState([])
 const [userEmail , setUserEmail] =  useState("");
 const [userPassword, setUserPassword] = useState("");
-const [userName, setUserName] = useState("")
-//user credentials
-const [userInfo , setUserInfo] =  useState({})
+const [username, setUserName] = useState("")
+
+//nav hook for dynamic url changing
 const navigate = useNavigate();
+
 //onchange listener functions for collecting credentials
 const getUserEmailInfo =(e)=>{
   setUserEmail(e.target.value.toLowerCase())
@@ -23,24 +25,53 @@ const getUserPasswordInfo =(e)=>{
 const getUserNameInfo =(e)=>{
   setUserName(e.target.value.toLowerCase())
 }
+
 //sign function to submit user credential
 const signUp =()=>{
-  fetch("http://localhost:8000/user",
-  {
+  user.forEach((val)=>{
+    if(val.email === userEmail ){
+      alert("email is already used by another user")
+    }else if(val.userName === username){
+      alert("this username already exist")
+    }else{
+    fetch("http://localhost:8000/user/", {
     method:"POST",
     body: JSON.stringify({
-      user: userName,
-      password: userPassword,
-      email:userEmail
+      id:user.length + 1,
+      userName:username,
+      password:userPassword,
+      email: userEmail
     }),
-    header:{
+    headers:{
       "Content-Type": "application/json"
     }
-  }
-  ).then(userAdd => userAdd.json())
-  .then(userInfo => console.log(userInfo))
+  })
+  .then(userAdd => userAdd.json())
+  .then(userInfo =>{ 
+    console.log(userInfo) 
+     navigate("/")
+  })
   .catch(err => console.log(err))
-} 
+    }
+  })
+}
+
+//getting all user info
+  useEffect(
+    ()=>{ 
+      const abortCon = new AbortController()
+     fetch("http://localhost:8000/user",{signal: abortCon.signal}) 
+      .then(user =>{
+        if(!user.ok)
+        throw Error("failed fetch")
+        return user.json()
+      }) 
+      .then(userInfo => { 
+      setUserInfo(userInfo)
+      console.log(userInfo)
+    })
+      return ()=> abortCon.abort 
+    },[]);
 
 return (
   <div className="Home">
