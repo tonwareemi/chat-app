@@ -20,9 +20,9 @@ const getPasswordInfo =(e)=>{
 const signIn =()=>{
   //authentication of email 
   for(let i = 0; i < info.length; i++){
-    if(info[i].email === user|| info[i].userName === user){
+    if(info[i].email === user.trim() || info[i].userName === user.trim()){
     
-        if(password === info[i].password){
+        if(password.trim() === info[i].password){
           navigate("/dashboard")
         }else{
           alert("username and password does not match")
@@ -49,7 +49,7 @@ useEffect(
       console.log(userInfo)
     })
       return ()=> abortCon.abort 
-    },[user]);
+    },[]);
 
 return(
   <div className="Home">

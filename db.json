@@ -53,6 +53,18 @@
       "userName": "customer3",
       "password": "password",
       "email": "customer3@email.com"
+    },
+    {
+      "id": 5,
+      "userName": "customer5",
+      "password": "passord",
+      "email": "customer5@gmail.com"
+    },
+    {
+      "id": 6,
+      "userName": "hillaryzakana",
+      "password": "password",
+      "email": "hillaryzakana90@gmail.com"
     }
   ]
 }
