@@ -37,7 +37,7 @@ const signUp =()=>{
     fetch("http://localhost:8000/user/", {
     method:"POST",
     body: JSON.stringify({
-      id:user.length + 1,
+      id:`c{user.length + 1}`,
       userName:username.trim(),
       password:userPassword.trim(),
       email: userEmail.trim()

@@ -5,8 +5,10 @@ function Dashboard (){
   const   [chatList, setChatList] = useState([])
   // this is to fetch all chats and get accessable chsts
   useEffect(()=>{
-    
-  })
+  fetch("http://localhost:8000/chats")
+  .then(data => data.json())
+  .then(data => console.log(data));
+  },[])
   return (
       <div>dashboard</div>
     )

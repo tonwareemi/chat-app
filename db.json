@@ -31,37 +31,37 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "c1",
       "userName": "admin",
       "password": "adminPass",
       "email": "admin@gmail.com"
     },
     {
-      "id": 2,
+      "id": "c2",
       "userName": "customer1",
       "password": "password",
       "email": "customer1@email.com"
     },
     {
-      "id": 3,
+      "id": "c3",
       "userName": "customer2",
       "password": "password",
       "email": "customer2@email.com"
     },
     {
-      "id": 4,
+      "id": "c4",
       "userName": "customer3",
       "password": "password",
       "email": "customer3@email.com"
     },
     {
-      "id": 5,
+      "id": "c5",
       "userName": "customer5",
       "password": "passord",
       "email": "customer5@gmail.com"
     },
     {
-      "id": 6,
+      "id": "c6",
       "userName": "hillaryzakana",
       "password": "password",
       "email": "hillaryzakana90@gmail.com"
