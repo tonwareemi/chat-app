@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, useContext} from "react"
+import UserContext from "../context/userContext"
 import "../css/signin.css"
 import {Link, useNavigate } from "react-router-dom"
 
@@ -6,9 +7,14 @@ function Login(){
 //var states for collecting user login credential
 const [user , setUser] =  useState(""); // this can be email or user name
 const [password, setPassword] = useState("");
+
 //user credentials
 const [info , setInfo] =  useState([])
+
+
 const navigate = useNavigate();
+
+
 //onchange listener functions for collecting credentials
 const getUserNameInfo =(e)=>{
   setUser(e.target.value.toLowerCase())
@@ -16,12 +22,12 @@ const getUserNameInfo =(e)=>{
 const getPasswordInfo =(e)=>{
   setPassword(e.target.value)
 }
+
 //sign function to submit user credential
 const signIn =()=>{
   //authentication of email 
   for(let i = 0; i < info.length; i++){
     if(info[i].email === user.trim() || info[i].userName === user.trim()){
-    
         if(password.trim() === info[i].password){
           navigate("/dashboard")
         }else{
@@ -56,7 +62,6 @@ return(
     <div className="container">
       <nav>
       <div className="sign">
-      <Link to="/" className="in"> Sign in</Link>
       <Link to="signup" className="up">Sign up</Link>
       </div>
       </nav>

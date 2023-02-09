@@ -4,11 +4,13 @@ import Login from "./component/login.js"
 import Signup from "./component/signup.js" 
 import NonFound from "./component/notFound"
 import Dashboard from "./component/dashboard"
+import {UserProvider} from "./context/userContext"
 
 
 function App() {
   return (
     <div className="App">
+      <UserProvider>
         <Routes>
           <Route exact path="/" element={<Login />} />
              <Route path="*"  element={<NonFound/>}/>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/dashboard" the element={<Dashboard/>}/>
           <Route exact path="/signup" element={<Signup/>} />
         </Routes>
+      </UserProvider>
     </div>
   );
 }
