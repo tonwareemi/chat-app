@@ -11,7 +11,9 @@ const [password, setPassword] = useState("");
 //user credentials
 const [info , setInfo] =  useState([])
 
-
+//this context is used to know the user login to in the dashboard
+const User = useContext(UserContext)
+//this is used to programmatically move user's to another page
 const navigate = useNavigate();
 
 
@@ -29,7 +31,9 @@ const signIn =()=>{
   for(let i = 0; i < info.length; i++){
     if(info[i].email === user.trim() || info[i].userName === user.trim()){
         if(password.trim() === info[i].password){
-          navigate("/dashboard")
+            User.setUser(info[i]);
+          //AccesibleUser.setAccesibleUser(info[i].id);
+          navigate("/dashboard") 
         }else{
           alert("username and password does not match")
         }
@@ -52,7 +56,6 @@ useEffect(
       }) 
       .then(userInfo => { 
       setInfo(userInfo)
-      console.log(userInfo)
     })
       return ()=> abortCon.abort 
     },[]);

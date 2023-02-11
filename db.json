@@ -3,8 +3,14 @@
     {
       "id": "text1",
       "accessors": [
-        "c1",
-        "ad1"
+        {
+          "id":"c1"
+          "name":"customer1"
+        },
+        {
+          "id":"c2"
+          "name": "customer2"
+        }
       ],
       "messages": [
         {
