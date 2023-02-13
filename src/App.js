@@ -5,6 +5,7 @@ import Signup from "./component/signup.js"
 import NonFound from "./component/notFound"
 import Dashboard from "./component/dashboard"
 import {UserProvider} from "./context/userContext"
+import {ChatsProvider} from "./context/chatsContext"
 
 
 function App() {
@@ -15,7 +16,9 @@ function App() {
           <Route exact path="/" element={<Login />} />
              <Route path="*"  element={<NonFound/>}/>
           <Route />
-          <Route path="/dashboard" the element={<Dashboard/>}/>
+          <ChatsProvider>
+             <Route path="/dashboard" the element={<Dashboard/>}/>
+          </ChatsProvider>
           <Route exact path="/signup" element={<Signup/>} />
         </Routes>
       </UserProvider>

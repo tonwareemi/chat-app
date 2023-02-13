@@ -2,34 +2,21 @@
   "chats": [
     {
       "id": "text1",
-      "accessors": [
-        {
-          "id":"c1"
-          "name":"customer1"
-        },
-        {
-          "id":"c2"
-          "name": "customer2"
-        }
-      ],
       "messages": [
         {
           "sender": "c1",
-          "reciever": "ad1",
+          "reciever": "c2",
           "text": "hi how are you"
         }
       ]
     },
     {
       "id": "text2",
-      "accessors": [
-        "c2",
-        "ad1"
-      ],
+      "accessors":["c3","c1"],
       "messages": [
         {
-          "sender": "c2",
-          "reciever": "ad1",
+          "sender": "c3",
+          "reciever": "c1",
           "text": "hi how are you"
         }
       ]
@@ -40,19 +27,29 @@
       "id": "c1",
       "userName": "admin",
       "password": "adminPass",
-      "email": "admin@gmail.com"
+      "email": "admin@gmail.com",
+      "chats" :[
+         {"id":"text1" ,"OtherUser":"c2", "name":"customer1"},
+         {"id":"text2" ,"OtherUser":"c3" ,"name":"customer2"}
+        ]
     },
     {
       "id": "c2",
       "userName": "customer1",
       "password": "password",
-      "email": "customer1@email.com"
+      "email": "customer1@email.com",
+      "chats" :[
+        {"id":"text2", "OtherUser":"c1", "name":"admin"}
+        ]
     },
     {
       "id": "c3",
       "userName": "customer2",
       "password": "password",
-      "email": "customer2@email.com"
+      "email": "customer2@email.com",
+      "chats" :[
+        {"id":"text2", "OtherUser":"c1", "name":"admin"}
+        ]
     },
     {
       "id": "c4",

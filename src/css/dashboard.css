@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chat-container{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+}
+
+.chat{
+  display: flex;
+  align-content: left;
+  
+}
