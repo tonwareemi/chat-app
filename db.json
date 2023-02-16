@@ -1,12 +1,17 @@
 {
-  "chats": [
-    {
+   "chats":[
+      {
       "id": "text1",
       "messages": [
         {
           "sender": "c1",
           "reciever": "c2",
           "text": "hi how are you"
+        },
+        {
+          "sender": "c2",
+          "reciever": "c1",
+          "text":"fine and you"
         }
       ]
     },
@@ -21,7 +26,7 @@
         }
       ]
     }
-  ],
+    ],
   "user": [
     {
       "id": "c1",
