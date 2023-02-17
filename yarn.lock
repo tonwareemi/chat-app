@@ -2402,11 +2402,6 @@ async@^2.6.2:
   dependencies:
     lodash "^4.17.14"
 
-async@~0.2.9:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-  integrity sha512-eAkdoKxU6/LkKDBzLpT+t6Ff5EtfSF4wx1WfJiPEEV7WNLnDaRXk0oVysiEPm262roaachGexwUv94WhSgN5TQ==
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -2799,11 +2794,6 @@ chalk@^4.0.0, chalk@^4.0.2, chalk@^4.1.0, chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chance@~0.5.1:
-  version "0.5.9"
-  resolved "https://registry.yarnpkg.com/chance/-/chance-0.5.9.tgz#337d725f2322932fa60b88f2676cb4721c462d9c"
-  integrity sha512-NwSG3L9l0UcwT/43GSuX8e3p9sQngYEpZKGZ4mUKlVaGqgsBVWyfZwHqSATRxjkAP9BxA0o3nA21ujBvGByWhA==
-
 char-regex@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/char-regex/-/char-regex-1.0.2.tgz#d744358226217f981ed58f479b1d6bcc29545dcf"
@@ -3090,11 +3080,6 @@ cosmiconfig@^7.0.0:
     parse-json "^5.0.0"
     path-type "^4.0.0"
     yaml "^1.10.0"
-
-cospa@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/cospa/-/cospa-0.1.0.tgz#add3c4f08573a886a4a6293971d00fb8cadc30ab"
-  integrity sha512-7Np0cvvP2gdtTzhWZWKTZ5LgRD5GK9UQNtFBSRcplIF1jKE1oSAmcwrFVzle0M7Wj+a2fLxGj6BOVO8XZL3l/w==
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
@@ -4096,14 +4081,6 @@ express@^4.17.1, express@^4.17.3:
     type-is "~1.6.18"
     utils-merge "1.0.1"
     vary "~1.1.2"
-
-fake.js@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/fake.js/-/fake.js-1.0.2.tgz#8ad31f0b2a23b923ed941bb9bfb894c9786eb220"
-  integrity sha512-WSg4kc6ULIGGsKtw7Z7TnGEPpDrGxK3c/VGBP6n3gK9NqOL44C+BBVT2Lr7oGAX8n/oW0iwAni7l14BJTbMobw==
-  dependencies:
-    async "~0.2.9"
-    chance "~0.5.1"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
